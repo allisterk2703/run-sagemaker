@@ -1,0 +1,18 @@
+FROM python:3.11-slim
+
+WORKDIR /opt/program
+
+RUN apt-get update && apt-get install -y --no-install-recommends gcc && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.training.txt .
+
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir -r requirements.training.txt
+
+ENV PYTHONUNBUFFERED=TRUE
+ENV PYTHONDONTWRITEBYTECODE=TRUE
+ENV PYTHONPATH="/opt/program"
+
+COPY src/ src/
+
+ENTRYPOINT ["python", "src/train.py"]
