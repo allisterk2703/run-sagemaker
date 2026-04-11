@@ -73,7 +73,7 @@ AWS_REGION=<your-aws-region>
 AWS_ACCOUNT_ID=<your-account-id>
 ```
 
-Used by the `Makefile` to build ECR URIs. Never commit this file.
+Used by the `Makefile` to build ECR URIs.
 
 ### `secrets/` directory
 
@@ -90,10 +90,10 @@ secrets/
 ### Key `make` commands
 
 ```bash
-make build              # Build AMD64 images
-make build-arm64        # Build ARM64 images
-make run-training-arm64 # Run training container locally
-make run-inference-arm64# Run inference container locally
-make deploy             # ECR setup + build + push (AMD64)
-make help               # List all commands
+make build               # Build AMD64 images
+make build-arm64         # Build ARM64 images
+make run-training-arm64  # Run training container locally
+make run-inference-arm64 # Run inference container locally
+make deploy              # ECR setup + build + push (AMD64)
+make help                # List all commands
 ```
