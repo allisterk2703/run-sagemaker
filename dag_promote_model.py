@@ -94,7 +94,7 @@ dag = DAG(
     schedule_interval=None,
     catchup=False,
     max_active_tasks=1,
-    tags=["sagemaker", "model"],
+    tags=["run-sagemaker"],
     doc_md=DAG_DOC_MD,
     params={
         "job_name": Param(

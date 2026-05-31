@@ -163,7 +163,7 @@ dag = DAG(
     schedule_interval=None,
     catchup=False,
     max_active_tasks=1,
-    tags=["sagemaker", "inference"],
+    tags=["run-sagemaker"],
     doc_md=DAG_DOC_MD,
     params={
         "project_name": Param("titanic", type="string", description="Identifier for the project; used as a prefix for naming SageMaker Batch Transform jobs (🔗 https://eu-west-1.console.aws.amazon.com/sagemaker/home?region=eu-west-1#/transform-jobs)"),
